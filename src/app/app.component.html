@@ -1,24 +1,46 @@
-<div class="container">
-  <h1>Date Services</h1>
-  <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm.value);postForm.reset()">
-    <input 
-      type="date" 
-      name="firstDate" 
-      id="firstdt"
-      style="margin-top: 10px;"
-      [(ngModel)] = "firstDate"
-    >
-    <input 
-      type="date" 
-      name="secondDate" 
-      id="secdt"
-      style="margin-top: 10px;"
-      [(ngModel)] = "secondDate"
-    >
-    <button
-      style="margin-top: 20px;margin-bottom: 20px;"
-    >
-      submit
-    </button>
-  </form>
+<div class="pcont">
+  <div class="container">
+    <div class="child1">
+      <h1>Date Services</h1>
+      <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm.value);postForm.reset()">
+        <input 
+          type="date" 
+          name="firstDate" 
+          id="firstdt"
+          style="margin-top: 10px;"
+          [(ngModel)] = "firstDate"
+        >
+        <input 
+          type="date" 
+          name="secondDate" 
+          id="secdt"
+          style="margin-top: 10px;"
+          [(ngModel)] = "secondDate"
+        >
+        <button
+          style="margin-top: 20px;margin-bottom: 20px;"
+        >
+          submit
+        </button>
+      </form>
+    </div>
+  
+    <div class="child2">
+      <h1>Array Services</h1>
+      <form #postFormData="ngForm" (ngSubmit)="onArrSubmit(postFormData.value);postFormData.reset()">
+        <input 
+          type="text" 
+          name="firstString" 
+          id="firstst"
+          style="margin-top: 10px;"
+          [(ngModel)] = "firstString"
+        >
+        <button
+          style="margin-top: 20px;margin-bottom: 20px;"
+        >
+          submit
+        </button>
+      </form>
+    </div>
+  </div>
 </div>

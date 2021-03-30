@@ -14,14 +14,18 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Project Summary
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+It is a example project for understanding the Angular services. I have just implemented the two services - Date and Array Services.
 
-## Running end-to-end tests
+1. Date Utility - Function to 
+- Calculate days between 2 date
+- month between 2 dates
+- date comparison
+- date formatatting
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Array Utility (String or Object array )
+- Reverse Array
+- Array Null or Empty Check
+- Array Sort
+- value exists in array
