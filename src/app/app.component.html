@@ -1,56 +1,44 @@
+<nav class="navbar navbar-dark bg-secondary">
+  <span class="navbar-brand mb-0 h1">Services</span>
+</nav>
 <div class="pcont">
   <div class="container">
     <div class="child1">
       <h1>Date Services</h1>
-      <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm.value);postForm.reset()">
-        <input 
-          type="date" 
-          name="firstDate" 
-          id="firstdt"
-          style="margin-top: 10px;"
-          [(ngModel)] = "firstDate"
-        >
-        <input 
-          type="date" 
-          name="secondDate" 
-          id="secdt"
-          style="margin-top: 10px;"
-          [(ngModel)] = "secondDate"
-        >
-        <button
-          style="margin-top: 20px;margin-bottom: 20px;"
-        >
+      <form id="dateForm" #postForm="ngForm" (ngSubmit)="onSubmit(postForm.value);postForm.reset()">
+        <input class="form-control" type="date" name="firstDate" id="firstdt" style="margin-top: 10px;"
+          [(ngModel)]="firstDate">
+        <input class="form-control" type="date" name="secondDate" id="secdt" style="margin-top: 10px;"
+          [(ngModel)]="secondDate">
+        <button id="dateSubmit" class="btn btn-primary">
           submit
         </button>
       </form>
-      <h2>The Result Data are</h2>
-      <p>{{dc1}}</p>
-      <p>{{md1}}</p>
-      <p>{{cd1}}</p>
-      <p>{{fd1}}</p>
+      <div *ngIf="dc1 || md1 || cd1 || fd1" id="dateResultContainer">
+        <h2>The Result Data are</h2>
+        <p>{{dc1}}</p>
+        <p>{{md1}}</p>
+        <p>{{cd1}}</p>
+        <p>{{fd1}}</p>
+      </div>
     </div>
-  
+
     <div class="child2">
       <h1>Array Services</h1>
       <form #postFormData="ngForm" (ngSubmit)="onArrSubmit(postFormData.value);postFormData.reset()">
-        <input 
-          type="text" 
-          name="firstString" 
-          id="firstst"
-          style="margin-top: 10px;"
-          [(ngModel)] = "firstString"
-        >
-        <button
-          style="margin-top: 20px;margin-bottom: 20px;"
-        >
+        <input class="form-control" type="text" name="firstString" id="firstst" style="margin-top: 10px;"
+          [(ngModel)]="firstString">
+        <button class="btn btn-primary">
           submit
         </button>
       </form>
-      <h2>The Result Data are</h2>
-      <p>{{ar1}}</p>
-      <p>{{ann1}}</p>
-      <p>{{as1}}</p>
-      <p>{{ve1}}</p>
+      <div *ngIf="ar1 || ann1 || as1 || ve1" id="arrayResultContainer">
+        <h2>The Result Data are</h2>
+        <p>{{ar1}}</p>
+        <p>{{ann1}}</p>
+        <p>{{as1}}</p>
+        <p>{{ve1}}</p>
+      </div>
       <!-- <p>{{dc1}}</p> -->
     </div>
   </div>
